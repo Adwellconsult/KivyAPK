@@ -1,0 +1,40 @@
+<MDScreenManager>:
+
+<SplashScreen>:
+    name: 'splash'
+    MDFloatLayout:
+        md_bg_color: app.theme_cls.primary_color
+        
+        MDLabel:
+            text: "Welcome"
+            font_style: "H3"
+            halign: "center"
+            pos_hint: {"center_x": 0.5, "center_y": 0.6}
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+        
+        MDLabel:
+            text: "Counter App"
+            font_style: "H5"
+            halign: "center"
+            pos_hint: {"center_x": 0.5, "center_y": 0.4}
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+
+<MainScreen>:
+    name: 'main'
+    MDFloatLayout:
+        md_bg_color: app.theme_cls.bg_normal
+        
+        MDLabel:
+            id: counter_label
+            text: str(root.counter)
+            font_style: "H1"
+            halign: "center"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            theme_text_color: "Primary"
+        
+        MDRaisedButton:
+            text: "Increment"
+            pos_hint: {"center_x": 0.5, "center_y": 0.3}
+            on_press: root.increment_counter()
