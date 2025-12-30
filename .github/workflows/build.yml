@@ -27,8 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-                  sudo apt-get update
-            sudo apt-get install -y --no-install-recommends \
+          sudo apt-get install -y --no-install-recommends \
             build-essential \
             autoconf \
             automake \
@@ -68,9 +67,6 @@ jobs:
           pip install --upgrade buildozer cython
           pip install --upgrade python-for-android
 
-      - name: Run autoupdate
-        run: autoupdate    
-      
       - name: Build with Buildozer
         run: |
           yes | buildozer android debug
